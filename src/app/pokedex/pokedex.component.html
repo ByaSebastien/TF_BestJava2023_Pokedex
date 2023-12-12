@@ -1,0 +1,31 @@
+<div class="details">
+  <div class="pokemonDetail" *ngIf="currentPokemon">
+    <h2>{{currentPokemon.name}}</h2>
+    <div class="images">
+      <img [src]="currentPokemon.sprites.front_default">
+      <img [src]="currentPokemon.sprites.back_default">
+    </div>
+    <p>Height : {{currentPokemon.height}}</p>
+    <p>Weight : {{currentPokemon.weight}}</p>
+  </div>
+  <div class="pokemonDetail" *ngIf="!currentPokemon">
+    <h2>Welcome!</h2>
+    <div class="images">
+      <img src="https://66.media.tumblr.com/tumblr_mai132OrFS1rfjowdo1_500.gif">
+    </div>
+    <p>Nothing to show</p>
+    <p>Click one pokemon to see the details</p>
+  </div>
+</div>
+<div class="index">
+  <ul>
+    <li (click)="getOne(pokemon.url)" *ngFor="let pokemon of pokemonResult.results">
+      <p>{{pokemon.name}}</p>
+      <img [src]="pokemon.sprite">
+    </li>
+  </ul>
+  <div class="buttons">
+    <button (click)="previous()" [disabled]="!pokemonResult.previous">⬆️</button>
+    <button (click)="next()" [disabled]="!pokemonResult.next">⬇️</button>
+  </div>
+</div>

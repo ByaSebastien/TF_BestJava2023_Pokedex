@@ -1,0 +1,60 @@
+:host{
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+  background-color: chartreuse;
+  .details{
+    height: 100%;
+
+    .pokemonDetail{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      text-align: center;
+
+      .images{
+        height: 40%;
+
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+  .index{
+    height: 100%;
+    display: flex;
+    background-color: purple;
+     ul{
+       list-style: none;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+
+       li{
+         cursor: pointer;
+         height: 5%;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         img{
+           height: 100%;
+           width: auto;
+         }
+       }
+     }
+
+    .buttons {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
